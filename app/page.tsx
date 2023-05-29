@@ -1,39 +1,79 @@
-import Link from "next/link"
+import Image from "next/image"
+import { Roboto } from "@next/font/google"
+import heroImage from "assets/Images/hero.png"
+import clsx from "clsx"
 
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+})
 
 export default function IndexPage() {
   return (
-    <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
-          Beautifully designed components <br className="hidden sm:inline" />
-          built with Radix UI and Tailwind CSS.
-        </h1>
-        <p className="max-w-[700px] text-lg text-muted-foreground sm:text-xl">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
+    <>
+      <div className="bg-heroGradient">
+        <div className="flex flex-row h-[700px] w-full justify-between items-center container px-[6rem] pt-[5rem]">
+          <div className="flex flex-col gap-12">
+            <h1
+              className={clsx(
+                "text-6xl text-primary uppercase font-bold",
+                roboto.className
+              )}
+            >
+              Choose Your<span className="text-[#2F80ED]"> Courses </span>{" "}
+              <br />
+              to Success
+            </h1>
+            <p className="text-base">
+              Build skills with courses, certificates, and degrees online <br />{" "}
+              from world-class universities and companies.
+            </p>
+            <Button variant={"default"} size={"lg"} className="float-left w-40">
+              Get Started
+            </Button>
+          </div>
+          <div className="block">
+            <Image src={heroImage} alt="hero" className="w-[500px]" />
+          </div>
+        </div>
+      </div>
+      {/* Spacer Widget */}
+      <div className="my-32"></div>
+      {/* Spacer Widget */}
+      <div className="flex flex-col justify-center items-center p-10 text-center container gap-5">
+        <h2
+          className={clsx(
+            "text-5xl text-primary capitalize font-black leading-none",
+            roboto.className
+          )}
+        >
+          We Provide You <br /> The Better Solutions
+        </h2>
+        <p className="text-xl text-[#26323880] container px-52 dark:text-slate-300">
+          <span className="text-4xl">W</span>e have the Better solutions of your
+          problems. Website is a digital platform created by a consultant or{" "}
+          <br />
+          consultancy firm to showcase their skills, expertise, and services to
+          potential clients. Consulting websites <br /> typically include
+          information about the firm&apos;s services, testimonials or case
+          studies from satisfied clients, contact
+          <br /> information, and a portfolio of work. Some consulting websites
+          may also include a blog or resources section to
+          <br /> share updates, insights, and helpful information related to the
+          firm&apos;s area of expertise.
         </p>
       </div>
-      <div className="flex gap-4">
-        <Link
-          href={siteConfig.links.docs}
-          target="_blank"
-          rel="noreferrer"
-          className={buttonVariants({ size: "lg" })}
-        >
-          Documentation
-        </Link>
-        <Link
-          target="_blank"
-          rel="noreferrer"
-          href={siteConfig.links.github}
-          className={buttonVariants({ variant: "outline", size: "lg" })}
-        >
-          GitHub
-        </Link>
+      {/* Spacer Widget */}
+      <div className="my-32"></div>
+      {/* Spacer Widget */}
+      <div className=" bg-[#1C1D1E] dark:bg-slate-400">
+        <div className="w-full flex flex-row justify-between items-center h-20 container">
+          <p className="text-primary-foreground">© 2023 All Rights Reserved.</p>
+          <p className="text-primary-foreground">Terms of Service</p>
+        </div>
       </div>
-    </section>
+    </>
   )
 }

@@ -10,9 +10,14 @@ module.exports = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        "3xl": "1800px",
       },
     },
     extend: {
+      backgroundImage: {
+        heroGradient:
+          "linear-gradient(101.79deg, #F0E9EA 0%, rgba(248, 216, 122, 0.442367) 54.74%, #E6DEE3 98.16%);",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
