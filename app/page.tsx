@@ -53,15 +53,13 @@ export default function IndexPage() {
         </h2>
         <p className="text-xl text-[#26323880] container px-52 dark:text-slate-300">
           <span className="text-4xl">W</span>e have the Better solutions of your
-          problems. Website is a digital platform created by a consultant or{" "}
-          <br />
+          problems. Website is a digital platform created by a consultant or
           consultancy firm to showcase their skills, expertise, and services to
-          potential clients. Consulting websites <br /> typically include
-          information about the firm&apos;s services, testimonials or case
-          studies from satisfied clients, contact
-          <br /> information, and a portfolio of work. Some consulting websites
-          may also include a blog or resources section to
-          <br /> share updates, insights, and helpful information related to the
+          potential clients. Consulting websites typically include information
+          about the firm&apos;s services, testimonials or case studies from
+          satisfied clients, contact information, and a portfolio of work. Some
+          consulting websites may also include a blog or resources section to
+          share updates, insights, and helpful information related to the
           firm&apos;s area of expertise.
         </p>
       </div>
