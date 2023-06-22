@@ -3,6 +3,8 @@
 import { useState } from "react"
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
 
+import { cn } from "@/lib/utils"
+
 const Dot = (props: any) => (
   <svg
     {...props}
@@ -62,31 +64,33 @@ const Slider = ({}) => {
         className="w-full h-full rounded-none bg-center bg-contain duration-500"
       ></div>
       {/* left arrow */}
-      <div className="hidden group-hover:block group-hover:transition group-hover:ease-in-out group-hover:duration-500 absolute top-[50%] -translate-x-0 -translate-y-[-50%] left-5 text-2xl rounded-full p-2 text-black/40 cursor-pointer ">
+      <div className="hidden group-hover:block group-hover:transition group-hover:ease-in-out group-hover:duration-500 absolute top-[50%] -translate-x-0 -translate-y-[-50%] left-5 text-3xl rounded-full p-2 text-black/70 cursor-pointer ">
         <ChevronLeftIcon onClick={prevSlide} size={50} />
       </div>
       {/* right arrow */}
-      <div className="hidden group-hover:block group-hover:transition group-hover:ease-in-out group-hover:duration-500 absolute top-[50%] -translate-x-0 -translate-y-[-50%] right-5 text-2xl rounded-full p-2 text-black/40 cursor-pointer ">
+      <div className="hidden group-hover:block group-hover:transition group-hover:ease-in-out group-hover:duration-500 absolute top-[50%] -translate-x-0 -translate-y-[-50%] right-5 text-3xl rounded-full p-2 text-black/70 cursor-pointer ">
         <ChevronRightIcon onClick={nextSlide} size={50} />
       </div>
       {/* dots */}
       <div className="flex absolute left-[30%] translate-x-[100%] -translate-y-[100%] justify-center py-2">
         {sliderImgs.map((_, index) => (
-          <div
-            key={index}
-            onClick={() => gotoSlide(index)}
-            className="text-6xl cursor-pointer"
-          >
-            <Dot
-              className={
-                currentIndex === index
-                  ? "text-muted text-8xl"
-                  : "text-black text-6xl"
-              }
-            />
-          </div>
+          <>
+            <div
+              key={index}
+              onClick={() => gotoSlide(index)}
+              className="text-6xl cursor-pointer mb-60"
+            ></div>
+          </>
         ))}
       </div>
+      {/* <Dot
+        className={cn(
+          "flex",
+          currentIndex === currentIndex
+            ? "text-muted text-8xl"
+            : "text-black text-6xl"
+        )}
+      /> */}
     </div>
   )
 }

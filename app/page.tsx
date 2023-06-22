@@ -14,7 +14,7 @@ const roboto = Roboto({
 export default function IndexPage() {
   return (
     <>
-      <div className="bg-heroGradient">
+      <div className="bg-heroGradient dark:bg-heroGradientDark">
         <div className="flex flex-row h-[700px] w-full justify-between items-center container px-[6rem] pt-[5rem]">
           <div className="flex flex-col gap-12">
             <h1
@@ -68,10 +68,14 @@ export default function IndexPage() {
       <div className="my-32"></div>
       <Slider />
       {/* Spacer Widget */}
-      <div className=" bg-[#1C1D1E] dark:bg-slate-400">
+      <div className=" bg-[#1C1D1E] dark:border-t dark:bg-background">
         <div className="w-full flex flex-row justify-between items-center h-20 container">
-          <p className="text-primary-foreground">© 2023 All Rights Reserved.</p>
-          <p className="text-primary-foreground">Terms of Service</p>
+          <p className="text-primary-foreground dark:text-white">
+            © 2023 All Rights Reserved.
+          </p>
+          <p className="text-primary-foreground dark:text-white">
+            Terms of Service
+          </p>
         </div>
       </div>
     </>

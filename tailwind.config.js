@@ -17,6 +17,7 @@ module.exports = {
       backgroundImage: {
         heroGradient:
           "linear-gradient(101.79deg, #F0E9EA 0%, rgba(248, 216, 122, 0.442367) 54.74%, #E6DEE3 98.16%);",
+        heroGradientDark: "linear-gradient(300deg, #000000 0%, #2c3e50 74%);",
       },
       colors: {
         border: "hsl(var(--border))",
