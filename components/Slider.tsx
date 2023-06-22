@@ -3,14 +3,12 @@
 import { useState } from "react"
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
 
-import { cn } from "@/lib/utils"
-
 const Dot = (props: any) => (
   <svg
     {...props}
     xmlns="http://www.w3.org/2000/svg"
-    width="50"
-    height="50"
+    width="100"
+    height="100"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -72,25 +70,23 @@ const Slider = ({}) => {
         <ChevronRightIcon onClick={nextSlide} size={50} />
       </div>
       {/* dots */}
-      <div className="flex absolute left-[30%] translate-x-[100%] -translate-y-[100%] justify-center py-2">
+      <div className="flex absolute translate-x-[100%] -translate-y-[90%] justify-center py-2">
         {sliderImgs.map((_, index) => (
-          <>
-            <div
-              key={index}
-              onClick={() => gotoSlide(index)}
-              className="text-6xl cursor-pointer mb-60"
-            ></div>
-          </>
+          <div
+            key={index}
+            onClick={() => gotoSlide(index)}
+            className="text-[150px] cursor-pointer"
+          >
+            <Dot
+              className={
+                currentIndex === index
+                  ? "text-muted text-[150px]"
+                  : "text-[#0457D2] text-[150px]"
+              }
+            />
+          </div>
         ))}
       </div>
-      {/* <Dot
-        className={cn(
-          "flex",
-          currentIndex === currentIndex
-            ? "text-muted text-8xl"
-            : "text-black text-6xl"
-        )}
-      /> */}
     </div>
   )
 }
