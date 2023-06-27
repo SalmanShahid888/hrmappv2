@@ -56,7 +56,7 @@ const Slider = ({}) => {
   }
 
   return (
-    <div className="max-w-full h-[780px] m-auto py-16 rounded-none relative group object-contain">
+    <div className="max-w-full h-[780px] m-auto rounded-none relative group object-contain">
       <div
         style={{ backgroundImage: `url(${sliderImgs[currentIndex].url})` }}
         className="w-full h-full rounded-none bg-center bg-contain duration-500"
