@@ -4,7 +4,6 @@ import heroImage from "assets/Images/hero.png"
 import clsx from "clsx"
 
 import { Button } from "@/components/ui/button"
-import Slider from "@/components/Slider"
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -66,7 +65,6 @@ export default function IndexPage() {
       </div>
       {/* Spacer Widget */}
       <div className="my-32"></div>
-      <Slider />
       {/* Spacer Widget */}
       <div className=" bg-[#1C1D1E] dark:border-t dark:bg-background">
         <div className="w-full flex flex-row justify-between items-center h-20 container">
